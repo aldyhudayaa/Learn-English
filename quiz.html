@@ -32,39 +32,78 @@
   <main>
     <form id="quizForm">
       <div class="quiz-question">
-        <h3>1. She _____ to school every day.</h3>
+        <h3>She _____ to school every day.</h3>
         <label><input type="radio" name="q1" value="a"> go</label><br>
         <label><input type="radio" name="q1" value="b"> goes</label><br>
         <label><input type="radio" name="q1" value="c"> going</label>
       </div>
 
       <div class="quiz-question">
-        <h3>2. I _____ a movie last night.</h3>
+        <h3>I _____ a movie last night.</h3>
         <label><input type="radio" name="q2" value="a"> watch</label><br>
         <label><input type="radio" name="q2" value="b"> watching</label><br>
         <label><input type="radio" name="q2" value="c"> watched</label>
       </div>
 
       <div class="quiz-question">
-        <h3>3. We _____ studying English now.</h3>
+        <h3>We _____ studying English now.</h3>
         <label><input type="radio" name="q3" value="a"> are</label><br>
         <label><input type="radio" name="q3" value="b"> is</label><br>
         <label><input type="radio" name="q3" value="c"> be</label>
       </div>
 
       <div class="quiz-question">
-        <h3>4. Where _____ you from?</h3>
+        <h3>Where _____ you from?</h3>
         <label><input type="radio" name="q4" value="a"> are</label><br>
         <label><input type="radio" name="q4" value="b"> is</label><br>
         <label><input type="radio" name="q4" value="c"> am</label>
       </div>
 
       <div class="quiz-question">
-        <h3>5. The cake _____ eaten by John.</h3>
+        <h3>The cake _____ eaten by John.</h3>
         <label><input type="radio" name="q5" value="a"> was</label><br>
         <label><input type="radio" name="q5" value="b"> is</label><br>
         <label><input type="radio" name="q5" value="c"> were</label>
       </div>
+      
+      <br> <h2>Finish this dialogs</h2>
+      <div class="quiz-question">
+        <h3>Ria: Good afternoon, Sinta <br>Sinta: _____</h3>
+        <label><input type="radio" name="q6" value="a"> are</label><br>
+        <label><input type="radio" name="q6" value="b"> is</label><br>
+        <label><input type="radio" name="q6" value="c"> am</label>
+      </div>
+
+      <div class="quiz-question">
+        <h3>Arrange these words! <br>is - name - Raka - my</h3>
+        <label><input type="radio" name="q7" value="a"> Raka is my name</label><br>
+        <label><input type="radio" name="q7" value="b"> Is my name Raka</label><br>
+        <label><input type="radio" name="q7" value="c"> My name is Raka </label>
+      </div>
+
+        <div class="quiz-question">
+      <h3>I will go to sleep and say…</h3>
+      <label><input type="radio" name="q8" value="a"> Good morning</label><br>
+      <label><input type="radio" name="q8" value="b"> Good afternoon</label><br>
+      <label><input type="radio" name="q8" value="c"> Good night</label><br>
+      <label><input type="radio" name="q8" value="d"> Good bye</label>
+    </div>
+
+    <div class="quiz-question">
+      <h3>Eri: Thank you <br>Dewa: …</h3>
+      <label><input type="radio" name="q9" value="a"> I'm fine</label><br>
+      <label><input type="radio" name="q9" value="b"> Goodbye</label><br>
+      <label><input type="radio" name="q9" value="c"> You're welcome</label><br>
+      <label><input type="radio" name="q9" value="d"> See you</label>
+    </div>
+
+    <div class="quiz-question">
+      <h3>My sister is… She always helps me.</h3>
+      <label><input type="radio" name="q10" value="a"> Kind</label><br>
+      <label><input type="radio" name="q10" value="b"> Cruel</label><br>
+      <label><input type="radio" name="q10" value="c"> Fat</label><br>
+      <label><input type="radio" name="q10" value="d"> Bad</label>
+    </div>
 
       <button type="button" onclick="checkAnswers()">Submit</button>
     </form>
@@ -83,7 +122,12 @@
         q2: "c",
         q3: "a",
         q4: "a",
-        q5: "a"
+        q5: "a",
+        q6: "a", 
+        q7: "c",
+        q8: "c",
+        q9: "c",
+        q10: "a"
       };
 
       let score = 0;
