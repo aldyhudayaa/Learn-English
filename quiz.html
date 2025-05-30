@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn English - Quiz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .quiz-question {
+      margin-bottom: 20px;
+    }
+
+    .quiz-question h3 {
+      margin-bottom: 10px;
+    }
+
+    #result {
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>English Quiz</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="lesson.html">Lesson</a>
+      <a href="quiz.html">Quiz</a>
+    </nav>
+  </header>
+
+  <main>
+    <form id="quizForm">
+      <div class="quiz-question">
+        <h3>1. She _____ to school every day.</h3>
+        <label><input type="radio" name="q1" value="a"> go</label><br>
+        <label><input type="radio" name="q1" value="b"> goes</label><br>
+        <label><input type="radio" name="q1" value="c"> going</label>
+      </div>
+
+      <div class="quiz-question">
+        <h3>2. I _____ a movie last night.</h3>
+        <label><input type="radio" name="q2" value="a"> watch</label><br>
+        <label><input type="radio" name="q2" value="b"> watching</label><br>
+        <label><input type="radio" name="q2" value="c"> watched</label>
+      </div>
+
+      <div class="quiz-question">
+        <h3>3. We _____ studying English now.</h3>
+        <label><input type="radio" name="q3" value="a"> are</label><br>
+        <label><input type="radio" name="q3" value="b"> is</label><br>
+        <label><input type="radio" name="q3" value="c"> be</label>
+      </div>
+
+      <div class="quiz-question">
+        <h3>4. Where _____ you from?</h3>
+        <label><input type="radio" name="q4" value="a"> are</label><br>
+        <label><input type="radio" name="q4" value="b"> is</label><br>
+        <label><input type="radio" name="q4" value="c"> am</label>
+      </div>
+
+      <div class="quiz-question">
+        <h3>5. The cake _____ eaten by John.</h3>
+        <label><input type="radio" name="q5" value="a"> was</label><br>
+        <label><input type="radio" name="q5" value="b"> is</label><br>
+        <label><input type="radio" name="q5" value="c"> were</label>
+      </div>
+
+      <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+  </main>
+
+  <footer>
+    <p>Made by Muhammad Aldy Hudaya — NIM: 2405181048 — TRPL 2-C</p>
+  </footer>
+
+  <script>
+    function checkAnswers() {
+      const answers = {
+        q1: "b",
+        q2: "c",
+        q3: "a",
+        q4: "a",
+        q5: "a"
+      };
+
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      for (let key in answers) {
+        const radios = document.getElementsByName(key);
+        for (let radio of radios) {
+          if (radio.checked && radio.value === answers[key]) {
+            score++;
+          }
+        }
+      }
+
+      document.getElementById("result").textContent = 
+        `You scored ${score} out of ${total}.`;
+    }
+  </script>
+</body>
+</html>
